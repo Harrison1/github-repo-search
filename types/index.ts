@@ -57,6 +57,7 @@ type ActionMap<M extends { [index: string]: any }> = {
 export interface Search {
   searchText: string
   language: string
+  sort: Sort
   searchCategory: SortCategories
   order: SortOrder
   page: number
@@ -71,7 +72,8 @@ export enum SearchActionTypes {
   UpdateOrder = 'UPDATE_ORDER',
   UpdateRepos = 'UPDATE_REPOS',
   UpdatePage = 'UPDATE_PAGE',
-  ResetValues = 'RESET_VALUES'
+  ResetValues = 'RESET_VALUES',
+  UpdateSort = 'UPDATE_SORT'
 }
 
 export interface SearchPayload {
@@ -87,6 +89,11 @@ export interface SearchPayload {
   }
   [SearchActionTypes.UpdatePage]: {
     page: number
+  }
+  [SearchActionTypes.UpdateSort]: {
+    sort: Sort
+    order: SortOrder
+    searchCategory: SortCategories
   }
 }
 

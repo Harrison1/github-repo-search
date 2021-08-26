@@ -18,7 +18,7 @@ const LanguageImage: FunctionComponent<{language: string, displayText?: boolean}
       case Langs.html:
         return '/languages/html.png'
       case Langs.java:
-        return '/languages/html.png'
+        return '/languages/java.png'
       case Langs.js:
         return '/languages/js.png'
       case Langs.php:
