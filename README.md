@@ -4,6 +4,7 @@
 
 ## Run Dev
 ```
+git clone git@github.com:Harrison1/github-repo-search.git
 npm install
 npm run dev
 ```
